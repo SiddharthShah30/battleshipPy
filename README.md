@@ -1,3 +1,5 @@
+---
+
 ## Table of Contents
 
 * [Features](#features)
@@ -16,16 +18,28 @@
 Key functionalities of the project:
 
 * Fully playable Battleship game in the terminal 
-* Random ship placement with horizontal or vertical orientation 
-* Grid-based coordinate guessing system
-* Visual board updates showing hits and misses
-* Limited attempts system for challenge-based gameplay
+* Player name input and game setup system
+* Difficulty scaling based on number of ships:
+
+  * 1 ship → 5x5 board
+  * 2 ships → 7x7 board
+  * 3 ships → 9x9 board 
+* Multiple ship placement without overlap
+* Bonus attempt awarded for every successful hit
+* Dynamic scoring system based on:
+
+  * Ships destroyed
+  * Attempts saved
+  * Difficulty level
+* Persistent local scoreboard saved to `score.txt`
 * Menu-driven interface with:
 
   * Start game
   * Instructions screen
+  * Scoreboard viewer
   * Exit option
-* ASCII-styled banners for menus and win/lose screens
+* ASCII-styled menus and win/lose screens
+* Improved board display with grid formatting
 * Input validation for coordinates and menu choices
 
 ---
@@ -67,30 +81,39 @@ After launching the program:
 
 ### 1. Select an option from the menu
 
-```
+```text
 1. Start Game
 2. Instructions
-3. Exit
+3. Scoreboard
+4. Exit
 ```
 
-### 2. During gameplay
+### 2. Game setup
 
-You will be prompted to enter:
+You will be prompted to:
 
+```text
+Enter your name
+Enter number of ships (1–3)
 ```
+
+This determines board size and starting attempts.
+
+### 3. During gameplay
+
+Enter coordinates when prompted:
+
+```text
 Enter row:
 Enter column:
 ```
 
-Coordinates must be within the board range.
+### 4. Objective
 
-### 3. Objective
-
-* Guess the hidden ship’s coordinates
-* Hit all parts of the ship before attempts run out
-* Win if the entire ship is sunk
-
-After each game you can restart or return to the main menu.
+* Find and destroy all enemy ships
+* Each hit grants a bonus attempt
+* Score points based on efficiency and difficulty
+* High scores are saved locally and viewable from the menu
 
 ---
 
@@ -102,7 +125,7 @@ Technologies used in this project:
 * Standard libraries only:
 
   * `random` – ship placement logic
-  * `time` – gameplay pauses and countdowns
+  * `time` – gameplay pacing and countdowns
   * `os` – terminal screen clearing 
 
 ---
@@ -119,11 +142,12 @@ python main.py
 
 Then verify:
 
-* Menu loads correctly
-* Ship placement varies each game
-* Board updates with hits and misses
-* Input validation prevents invalid coordinates
-* Restart and exit options function correctly
+* Difficulty scaling works correctly
+* Multiple ships spawn without overlap
+* Bonus attempts are granted on hits
+* Scores are calculated and saved correctly
+* Scoreboard displays top scores
+* Restart and exit flows function properly
 
 ---
 
@@ -138,7 +162,7 @@ If you'd like to improve this project:
 3. Commit your changes
 4. Open a pull request
 
-For larger gameplay changes, please open an issue first to discuss the proposal.
+For major gameplay or feature changes, please open an issue first to discuss the proposal.
 
 ---
 
@@ -175,5 +199,3 @@ SOFTWARE.
 * Developed by SiddharthShah30
 
 ---
-
-Tell me what you want next.
