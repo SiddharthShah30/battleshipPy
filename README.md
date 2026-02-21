@@ -2,9 +2,6 @@
 
 # Battleship CLI – Python Terminal Game
 
-Battleship CLI is a terminal-based battleship guessing game built in Python.
-The player attempts to locate and sink a hidden enemy ship within a limited number of attempts using grid coordinates.
-
 ---
 
 ## Table of Contents
