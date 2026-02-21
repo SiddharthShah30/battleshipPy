@@ -146,9 +146,9 @@ def create_board(size):
 def print_board(board):
     size = len(board)
 
-    print(" "+" ".join(f"{i:2}" for i in range(size)))
+    print("    "+" ".join(f"{i:2}" for i in range(size)))
 
-    print(" " + "---"*size)
+    print(" " + "----"*size)
 
     for i, row in enumerate(board):
         print(f"{i:2} | " + " ".join(f"{cell:2}" for cell in row))
