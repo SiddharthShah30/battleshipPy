@@ -1,5 +1,3 @@
----
-
 ## Table of Contents
 
 * [Features](#features)
@@ -17,13 +15,13 @@
 
 Key functionalities of the project:
 
-* Fully playable Battleship game in the terminal 
+* Fully playable Battleship game in the terminal
 * Player name input and game setup system
 * Difficulty scaling based on number of ships:
 
   * 1 ship → 5x5 board
   * 2 ships → 7x7 board
-  * 3 ships → 9x9 board 
+  * 3 ships → 9x9 board
 * Multiple ship placement without overlap
 * Bonus attempt awarded for every successful hit
 * Dynamic scoring system based on:
@@ -58,8 +56,6 @@ cd battleship-cli
 ### 2. Ensure Python is installed
 
 Python 3.7+ is recommended.
-
-Check your version:
 
 ```bash
 python --version
@@ -97,8 +93,6 @@ Enter your name
 Enter number of ships (1–3)
 ```
 
-This determines board size and starting attempts.
-
 ### 3. During gameplay
 
 Enter coordinates when prompted:
@@ -124,9 +118,9 @@ Technologies used in this project:
 * Python 3
 * Standard libraries only:
 
-  * `random` – ship placement logic
-  * `time` – gameplay pacing and countdowns
-  * `os` – terminal screen clearing 
+  * `random`
+  * `time`
+  * `os`
 
 ---
 
@@ -197,5 +191,3 @@ SOFTWARE.
 * Built entirely using Python standard libraries
 * Inspired by the classic Battleship board game
 * Developed by SiddharthShah30
-
----
