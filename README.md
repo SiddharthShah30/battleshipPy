@@ -1,9 +1,3 @@
----
-
-# Battleship CLI – Python Terminal Game
-
----
-
 ## Table of Contents
 
 * [Features](#features)
